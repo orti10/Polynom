@@ -4,9 +4,9 @@ Codding by : Tomer Maabari and Ortal Hanoch
 Computer since and Math , Ariel Uni
 
 Usage
-gral-core-0.11.jar java library
-LinePlotTest jaca class
-(For detailed description and examples see Main.java)
+1) gral-core-0.11.jar java library
+2) LinePlotTest jaca class
+* (For detailed description and examples see Main.java)
 
 #Implements
 1) public class Monom implements function
