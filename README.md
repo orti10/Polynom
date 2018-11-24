@@ -13,11 +13,11 @@ public class Monom implements function
 public class Monom_Comperator implements Comparator<Monom>
 public class Polynom implements Polynom_able
 
-##Monom's Constructors:
+#Monom's Constructors:
 Monom(double a, int b)
 Monom(Monom ot)
 
-##Monom's Methods:
+#Monom's Methods:
 double f(double x)
 Monom add (Monom m)
 Monom multiply (Monom m)
@@ -25,11 +25,11 @@ Monom derivative ()
 String toString()
 Monom (String str)
 
-##Polynom's Constructors:
+#Polynom's Constructors:
 Polynom() - Creates "x^0" polynomial, which is exactly "1.0".
 Polynom (Polynom p) -Creates a*x^deg polynomial.
 
-##Polynom's Methods:
+#Polynom's Methods:
 double f(double x)-value of polynomial at x
 add(Polynom_able p1)-Addition
 add(Monom m1)-Addition Monom to a Polynom
