@@ -9,9 +9,9 @@ LinePlotTest jaca class
 (For detailed description and examples see Main.java)
 
 #Implements
-public class Monom implements function
-public class Monom_Comperator implements Comparator<Monom>
-public class Polynom implements Polynom_able
+1) public class Monom implements function
+2) public class Monom_Comperator implements Comparator<Monom>
+3) public class Polynom implements Polynom_able
 
 #Monom's Constructors:
 Monom(double a, int b)
