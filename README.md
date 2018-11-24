@@ -1,64 +1,48 @@
 # Polynom
-מבוא לתכנות מונחה עצמים מטלה 1 מגישים: תומר מעברי 312485147 אורטל חנוך 205672538
 
-נציין : כל ה Tests נמצאים בקבצי JAVA ומצורפים כאן במטלה מצורפת ספרייה gral-core-0.11.jar ומחלקת LinePlotTest לשימוש בגרף.
+Codding by : Tomer Maabari and Ortal Hanoch
+Computer since and Math , Ariel Uni
 
-public class Monom implements function מחלקת Monom מוגדרת כמחלקה המממשת את מחלקת function
+Usage
+gral-core-0.11.jar java library
+LinePlotTest jaca class
+(For detailed description and examples see Main.java)
 
-public Monom(double a, int b) פונקציית בנאי מאתחל, המקבלת a כמקדם של x ו b כחזקה של x . בדיקה האם החזקה שלילית, אם לא, הפונקציה תאתחל את המונום לפי המקדם והחזקה ע"י setters
+#Implements
+public class Monom implements function
+public class Monom_Comperator implements Comparator<Monom>
+public class Polynom implements Polynom_able
 
-public Monom(Monom ot) פונקציית בנאי מעתיק, המקבלת מונום ot ולוקחת את הערכי המקדם והחזקה שלו ע"י getters
+##Monom's Constructors:
+Monom(double a, int b)
+Monom(Monom ot)
 
-public double f(double x) פונקציה המקבלת משתנה ממשי x ו"מציבה" אותו במונום this ) כמובן שגם בפולינום בעל כמה מונומים( ותחזיר את תוצאה ההצבה של x אחרי העלאה בחזקה ולאחר מכן הכפלה במקדם . *פונקציה זו היא פונקציית מימוש ממחלקת function
+##Monom's Methods:
+double f(double x)
+Monom add (Monom m)
+Monom multiply (Monom m)
+Monom derivative ()
+String toString()
+Monom (String str)
 
-public Monom add (Monom m) הפונקציה מקבלת מונום m בעל מקדם וחזקה. הפונקציה מחזירה את החיבור של המונום שקיבלה עם מונום this . אם אלו מונומים בעלי אותה חזקה, הפונקציה תחזיר את חיבור שלהם. אחרת, רק תוסיף אותו להיות איבר לצידו של המונום הקיים.
+##Polynom's Constructors:
+Polynom() - Creates "x^0" polynomial, which is exactly "1.0".
+Polynom (Polynom p) -Creates a*x^deg polynomial.
 
-public Monom multiply (Monom m) פונקציה המקבלת מונום m . תחזיר את ההכפלה בין המקדמים של המונום m עם המונום this ובנוסף, תחבר את החזקות שלהם לפי חוקי חזקות.
-
-public Monom derivative () פונקציה שמבצעת את פעולת הנגזרת על מונום this . מחזירה, אם החזקה הינה 0 אזי הפונקציה תחזיר את מונום ה 0 )מונום בעל מקדם 0 וחזקה שלילית 1 - ואי לכך מספר ממשי שנגזרתו היא 0 .) אחרת, הפונקציה תכפיל בין החזקה למקדם של X ותוריד את החזקה במעלה אחת .
-
-public String toString() פונקציית הדפסה של מונום כמחרוזת .
-
-public Monom (String str) פונקציה המקבלת מחרוזת וממירה אותו למונום מהצורה ax^b .
-
-public class Monom_Comperator implements Comparator מחלקה המממשת מחלקה של java .
-
-public int compare(Monom x1, Monom x2) פונקציה המקבלת שני מונומים. מחזירה את סדר החזקות לפי גודל בצורה ממוינת, בפועל זהו מיון לפי חזקות.
-
-public class Polynom implements Polynom_able מחלקת Polynom מוגדרת כמחלקה המממשת את מחלקת Polynom_able . הפונקציות להלן הינן פונקציות שממשות את המחלקה Polynom_able .
-
-public Polynom (Polynom p) פונקציית בנאי מעתיק, המקבלת משתנה P מסוג פולינום. הפונקציה תיצור פולינום בעל מס' איברים שהם מונומים ותחבר ביניהם בעזרת איטרטור .
-
-public Polynom () פונקציית בנאי מאתחל )דיפולטיבי ( .
-
-public double f(double x) פונקציה המקבלת x ממשי . מחזירה את ערך ה x בפונקציה f ע"י הצבתו בכל מונום בפולינום ומציאת הסכום הכולל .
-
-public void add(Polynom_able p1) פונקציה המקבלת פולינום 1P ומחברת את איברי p1 ו this ) חיבור בין מונומים) ויוצרת פולינום חדש ב this . בנוסף, הפולינום שנוצר הינו ממוין וללא מונומים בלי מקדם 0 .
-
-public void add(Monom m1) הפונקציה מקבלת מונום 1m מוסיפה מונום לפולינום this
-
-public void substract(Polynom_able p1) פונקציה המקבלת פולינום 1P הפונקציה מחסירה את פולינום P1 מ , this ע"י שימוש בכללי חיסור בין מונומים, בדיקת חזקה שווה וכו'..
-
-public void multiply(Polynom_able p1) פונקציה המקבלת פולינום 1P הכפלת כל מונום ב this עם כל איברי המונומים של P1 ובכך נוצר חיבור בין פולינומים . הפונקציה יוצרת פולינום חדש p2 שבו תהיה תוצאת המכפלה .
-
-public boolean equals(Polynom_able p1) פונקציה המקבלת פולינום 1P בודקת האם הפולינום שהתקבל שווה ממש גם בגודל וגם בתוכן לפולינום this , ע"י מעבר איבר איבר בשלילה .
-
-public void removeZero() פונקציית עזר שמוחקת איבר אם הוא בעל מקדם 0 .
-
-public boolean isZero() פונקציה המחזירה אמת אם מדובר בפולינום האפס, פולינום בעל כל המקדמים בערך 0 .
-
-public double root(double x0, double x1, double eps) פונקציה המקבלת קצה X0 קצה X1 ונקודה eps שהיא בתחום בין שני הקצוות . הפונקציה בודקת ערכי f(x) Y כך ש f(x0) ו f(x1) בעלי סימנים הפוכים )מכפלתם היא שלילית(. תוך שימוש במשפט ערך הביניים, הפונקציה משנה את ערך האמצע בין שני הקצוות עד למציאת נקודת החיתוך עם ציר ה - X שזה בעצם השורש.
-
-public Polynom_able copy() הפונקציה תבצע העתקה עמוקה של פולינום .
-
-public Polynom_able derivative() הפונקציה תחשב את הנגזרת של פולינום . ותחזיר את התוצאה בפולינום חדש תוך שמירת ערכי הפולינום לפני גזירה .
-
-public double area(double x0, double x1, double eps)
-
-public double areaUnder(double x0, double x1, double eps) פונקציה המקבלת קצה X0 קצה X1 ו eps שהיא מייצגת את קירוב התוצאה . תחזיר את שטח הפונקציה הכלוא מעל/מתחת לציר ה- X בהתאמה ע"י חישוב של מלבנים בעזרת משפט רימן .
-
-public Iterator iteretor() יצירת איטרטור חדש .
-
-public String toString() פונקציית הדפסה של פולינום כמחרוזת .
-
-public Polynom (String str) פונקציה המקבלת מחזרות וממירה אותה לפולינום
+##Polynom's Methods:
+double f(double x)-value of polynomial at x
+add(Polynom_able p1)-Addition
+add(Monom m1)-Addition Monom to a Polynom
+substract(Polynom_able p1)-Subtraction
+multiply(Polynom_able p1)-Multiplication
+boolean equals(Polynom_able p1)-Compare two polynomial
+void removeZero()
+boolean isZero()
+double root(double x0, double x1, double eps)
+Polynom_able copy()
+Polynom_able derivative()
+double area(double x0, double x1, double eps)
+double areaUnder(double x0, double x1, double eps)
+Iterator<Monom> iteretor()
+String toString()
+Polynom (String str)
