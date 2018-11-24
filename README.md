@@ -14,35 +14,35 @@ LinePlotTest jaca class
 3) public class Polynom implements Polynom_able
 
 #Monom's Constructors:
-Monom(double a, int b)
-Monom(Monom ot)
+1) Monom(double a, int b)
+2) Monom(Monom ot)
 
 #Monom's Methods:
-double f(double x)
-Monom add (Monom m)
-Monom multiply (Monom m)
-Monom derivative ()
-String toString()
-Monom (String str)
+1) double f(double x)
+2) Monom add (Monom m)
+3) Monom multiply (Monom m)
+4) Monom derivative ()
+5) String toString()
+6) Monom (String str)
 
 #Polynom's Constructors:
-Polynom() - Creates "x^0" polynomial, which is exactly "1.0".
-Polynom (Polynom p) -Creates a*x^deg polynomial.
+1) Polynom() - Creates "x^0" polynomial, which is exactly "1.0".
+2) Polynom (Polynom p) -Creates a*x^deg polynomial.
 
 #Polynom's Methods:
-double f(double x)-value of polynomial at x
-add(Polynom_able p1)-Addition
-add(Monom m1)-Addition Monom to a Polynom
-substract(Polynom_able p1)-Subtraction
-multiply(Polynom_able p1)-Multiplication
-boolean equals(Polynom_able p1)-Compare two polynomial
-void removeZero()
-boolean isZero()
-double root(double x0, double x1, double eps)
-Polynom_able copy()
-Polynom_able derivative()
-double area(double x0, double x1, double eps)
-double areaUnder(double x0, double x1, double eps)
-Iterator<Monom> iteretor()
-String toString()
-Polynom (String str)
+1) double f(double x)-value of polynomial at x
+2) add(Polynom_able p1)-Addition
+3) add(Monom m1)-Addition Monom to a Polynom
+4) substract(Polynom_able p1)-Subtraction
+5) multiply(Polynom_able p1)-Multiplication
+6) boolean equals(Polynom_able p1)-Compare two polynomial
+7) void removeZero()
+8) boolean isZero()
+9) double root(double x0, double x1, double eps)
+10) Polynom_able copy()
+11) Polynom_able derivative()
+12) double area(double x0, double x1, double eps)
+13) double areaUnder(double x0, double x1, double eps)
+14) Iterator<Monom> iteretor()
+15) String toString()
+16) Polynom (String str)
